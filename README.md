@@ -16,7 +16,12 @@ next generation of Neuroscience.
 
 If you are a new employee of the Center for Open Neuroscience, see
 [con/boarding](conboarding.md)
-## Annotated Bibliography
+
+## The Ecosystem
+
+There as a LOT of things to know! We've got a handy [definitions
+page](definitions.md)
+that brief introduces acronyms, projects, and more with links.
 
 ## The Vision
 
