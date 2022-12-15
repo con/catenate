@@ -5,8 +5,9 @@ into a single doc.
 
 ## Welcome
 
-Welcome to the Center for Open Neuroscience, where we are working
-together to make Neuroscience a better science!
+Welcome to the [Center for Open
+Neuroscience](https://centerforopenneuroscience.org/), where we are
+working together to make Neuroscience a better science!
 
 We do that by developing standards, workflows, tools, and automation
 that improve the effieniency, transparency, and reproducibility of the
