@@ -1,4 +1,4 @@
-# con/catinate
+# con/catenate
 
 All the resources and conText a new conScript needs, smushed together
 into a single doc.
@@ -22,7 +22,7 @@ If you are a new employee of the Center for Open Neuroscience, see
 
 There as a LOT of things to know! We've got a handy [definitions
 page](definitions.md)
-that brief introduces acronyms, projects, and more with links.
+that briefly introduces acronyms, projects, and more with links.
 
 ## The Vision
 
