@@ -55,6 +55,7 @@ How much does it cost to run things?
          
             Host discovery discovery.dartmouth.edu
                 HostName discovery.dartmouth.edu
+                PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
                 ProxyJump smaug.dartmouth.edu
                 ServerAliveInterval 30
                 user <your user name at discovery>
