@@ -39,7 +39,31 @@ How much does it cost to run things?
 
 
 1. Send desired login name and .pub portion of the SSH key to Yarik for development box(es): smaug, typhon, etc
-2. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
+2. Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
+   1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
+   2. The Discovery Cluster can be accessed off campus either via VPN or ProxyJump through ssh.
+      1. To set up VPN, please visit [the Services Portal](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17668) for info.
+      2. To set up ProxyJump through ssh, you must already have ssh access to a server on campus.
+         * For example, if you already have ssh access to our server `Smaug`, you can set up ProxyJump by adding the following to your `~/.ssh/config` file:
+         ```
+            Host smaug smaug.dartmouth.edu
+                Hostname smaug.dartmouth.edu
+                AddKeysToAgent yes
+                IdentityFile <path to your private key>
+                port <ssh port for Smaug>
+                user <your username>
+         
+            Host discovery discovery.dartmouth.edu
+                HostName discovery.dartmouth.edu
+                PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
+                ProxyJump smaug.dartmouth.edu
+                ServerAliveInterval 30
+                user <your user name at discovery>
+         ```
+   3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663) 
+      at Services Portal, [Dartmouth Brain Imaging Center Handbook](https://dbic-handbook.readthedocs.io/en/latest/discovery.html),
+      and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
+                
 3. ReproNim: request iam from David for AWS Access
 4. DANDI: request credentials for DANDI from Satra
 
