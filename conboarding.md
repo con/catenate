@@ -57,8 +57,6 @@ How much does it cost to run things?
                 HostName discovery.dartmouth.edu
                 ProxyJump smaug.dartmouth.edu
                 ServerAliveInterval 30
-                GSSAPIAuthentication yes
-                GSSAPIDelegateCredentials yes
                 user <your user name at discovery>
          ```
    3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663) 
