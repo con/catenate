@@ -30,7 +30,7 @@ No CON centralized IM ATM, only per project and for different communities.
 
 ### Drive
 
-1. [Repronim grant directory](https://drive.google.com/drive/folders/1AbpaqrCnInU-0V7KCxIn0RdG7578JrzI?ths=true) 
+1. [Repronim grant directory](https://drive.google.com/drive/folders/1AbpaqrCnInU-0V7KCxIn0RdG7578JrzI?ths=true)
 
 ### Compute
 
@@ -39,6 +39,17 @@ How much does it cost to run things?
 
 
 1. Send desired login name and .pub portion of the SSH key to Yarik for development box(es): smaug, typhon, etc
+   1. login to `smaug`: `ssh -i /path/to/key me@smaug.dartmouth.edu -p
+      $SOME_PORT`
+   1. login to `typhon`: `ssh -i /path/to/key me@typhon.dartmouth.edu -p
+      $SOME_PORT`
+      Note: When loging in from campus (use `eduroam`), SSH does not always work on
+      `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
+         1. (Assuming `ssh-agent` is running) `ssh-add /path/to/key`
+         1. `ssh-add -l` should now show your fingerprint.
+         1. SSH into `smaug` with connection forwarding: `ssh -A me@smaug.dartmouth.edu -p $SOME_PORT`
+         1. Once on `smaug` `ssh-add -l` should now show the same fingerprint.
+         1. From `smaug`, proceed to `typhon` with `ssh me@typhon.dartmouth.edu -p $SOME_PORT`
 2. Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
    1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
    2. The Discovery Cluster can be accessed off campus either via VPN or ProxyJump through ssh.
@@ -52,7 +63,7 @@ How much does it cost to run things?
                 IdentityFile <path to your private key>
                 port <ssh port for Smaug>
                 user <your username>
-         
+
             Host discovery discovery.dartmouth.edu
                 HostName discovery.dartmouth.edu
                 PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
@@ -60,11 +71,11 @@ How much does it cost to run things?
                 ServerAliveInterval 30
                 user <your user name at discovery>
          ```
-   3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663) 
+   3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663)
       at Services Portal, [Dartmouth Brain Imaging Center Handbook](https://dbic-handbook.readthedocs.io/en/latest/discovery.html),
       and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
    4. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
-                
+
 3. ReproNim: request iam from David for AWS Access
 4. DANDI: request credentials for DANDI from Satra
 
