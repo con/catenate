@@ -63,6 +63,7 @@ How much does it cost to run things?
    3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663) 
       at Services Portal, [Dartmouth Brain Imaging Center Handbook](https://dbic-handbook.readthedocs.io/en/latest/discovery.html),
       and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
+   4. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
                 
 3. ReproNim: request iam from David for AWS Access
 4. DANDI: request credentials for DANDI from Satra
