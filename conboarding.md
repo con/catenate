@@ -1,20 +1,19 @@
 # Con/boarding
 
-This pages is intended for new employees of the Center for Open
-Neuroscience, so please note that the public does not have access to
-some of these links.
+This pages is intended for new employees of the Center for Open Neuroscience.
+Please note that some of the following links and resources are not publicly accessible.
 
 ## Accounts
 
 ### Github
 
-Ask Yarik to add you to the [CON Org](https://github.com/con)
+Ask Yarik to add you to the [CON Org](https://github.com/con).
 
 ### Chat clients
 
-No CON centralized IM ATM, only per project and for different communities.
+CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
 
-0. CON-internal: by invitation (ask someone for a URL) after you get on matrix.io.
+0. CON-internal: by invitation (ask a colleague for the URL) after registering on matrix.io.
 1. DANDI slack workspace: registration comes with registering a user on https://dandiarchive.org. Then user needs to be invited to "internal" room.
 2. ReproNIM slack workspace (ask Yarik)
 3. DataLad matrix.io: [public room](https://matrix.to/#/#datalad:matrix.org), [internal](not-sure-if-not-private)
