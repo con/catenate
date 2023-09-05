@@ -1,36 +1,27 @@
 # con/catenate
 
-All the resources and conText a new conScript needs, smushed together
-into a single doc.
+All the resources and conText a new conScript needs, smushed together into a single repository.
 
 ## Welcome
 
-Welcome to the [Center for Open
-Neuroscience](https://centerforopenneuroscience.org/), where we are
-working together to make Neuroscience a better science!
+Welcome to the [Center for Open Neuroscience](https://centerforopenneuroscience.org/), where we are working together to make Neuroscience a better science!
 
-We do that by developing standards, workflows, tools, and automation
-that improve the effieniency, transparency, and reproducibility of the
-next generation of Neuroscience.
+We do that by developing standards, workflows, tools, and automation to improve the effieniency, transparency, and reproducibility of the next generation of Neuroscience.
 
 ## Employees
 
-If you are a new employee of the Center for Open Neuroscience, see
-[con/boarding](conboarding.md)
+If you are a new employee of the Center for Open Neuroscience, see [con/boarding](conboarding.md).
 
 ## The Ecosystem
 
-There as a LOT of things to know! We've got a handy [definitions
-page](definitions.md)
-that briefly introduces acronyms, projects, and more with links.
+There are a LOT of things to know!
+We have a handy [definitions page](definitions.md), which briefly introduces acronyms, projects, and more with links.
 
 ## The Vision
 
-Here are a few resources that can help to understand how the projects
-fit together into the Open Neuroscience ecosystem.
+Here are a few resources that can help to understand how the projects fit together into the Open Neuroscience ecosystem.
 
-[Intro
-slides](https://datasets.datalad.org/centerforopenneuroscience/talks/2022-nih-compcore.html#/)
+[Intro slides](https://datasets.datalad.org/centerforopenneuroscience/talks/2022-nih-compcore.html#/)
 
 [5 Steps to More Reproducible Neuroimaging Research](https://www.repronim.org/5steps)
 : High level of how many of the ReproNim projects fit together into a Reproducibility-friendly workflow.
