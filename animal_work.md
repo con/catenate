@@ -2,7 +2,7 @@
 
 ## Preface
 
-The process of obtaining animal experiments (and possibly experimental work in general) is primarily stifled by the cyclic dependency of funding and ethics approval.
+The process of performing animal experiments (and possibly experimental work in general) is primarily stifled by the cyclic dependency of funding and ethics approval.
 No intrinsic priority exists between the two, but due to the time frames (fixed as opposed to running deadlines), it is best to commence ethics approval work *before* any funding is secured — unintuitive as this may sound.
 
 ## Ethics Approval
