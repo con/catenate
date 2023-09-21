@@ -9,6 +9,29 @@ Please note that some of the following links and resources are not publicly acce
 
 Ask Yarik to add you to the [CON Org](https://github.com/con).
 
+#### Conventions
+
+1. Use `https` instead of `ssh` for git remotes to make the configuration
+   more portable. You can switch to `ssh` for pushing by appending to your
+   `~/.gitconfig`
+
+   ```
+   [url "git@github.com:"]
+      pushinsteadOf = https://github.com/
+      pushinsteadOf = http://github.com/
+   [url "git@gitlab.com:"]
+      pushInsteadOf = https://gitlab.com/
+   [url "git@bitbucket.org:"]
+      pushinsteadOf = https://bitbucket.org/
+   ```
+1. While you are modifying .gitconfig you might consider setting your
+   default branch as well.
+
+```
+[init]
+   defaultBranch = main
+```
+
 ### Chat clients
 
 CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
