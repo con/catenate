@@ -13,7 +13,7 @@ Ask Yarik to add you to the [CON Org](https://github.com/con)
 #### Conventions
 
 1. Use `https` instead of `ssh` for git remotes to make the configuration
-   more portable. You can substitute `ssh` locally by appending to your
+   more portable. You can switch to `ssh` for pushing by appending to your
    `~/.gitconfig`
 
    ```
