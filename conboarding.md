@@ -49,6 +49,7 @@ CON does not currently have a centralized IM infrastructure, there are however a
 1. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
 2. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
 2. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
+3. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
 ### Drive
 
