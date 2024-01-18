@@ -44,6 +44,8 @@ Here are a few resources that can help to understand how the projects fit togeth
 
 [Promoting an open research culture](https://www.science.org/doi/10.1126/science.aab2374)
 
+Dianne Patterson's [Neuroimaging Core Docs](https://neuroimaging-core-docs.readthedocs.io/en/latest/index.html) for the University of Arizona group is an excellent resource that covers usage of many open source Neuroimaging tools for BIDS data. 
+
 ## Extra fun
 
 [A new virtue of phantom MRI data: explaining variance in human participant data](https://f1000research.com/articles/9-1131/v1)
