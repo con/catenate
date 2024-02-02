@@ -149,7 +149,7 @@ How much does it cost to run things?
 
       1. Create an SSH tunnel to the VNC server
 
-         ```ssh -L <local port number>:localhost:<VNC assgined port number> <username>@<server name>.dartmouth.edu```
+         ```ssh -L <local port number>:localhost:<VNC assigned port number> <username>@<server name>.dartmouth.edu```
 
       2. Connect to the VNC session through the SSH tunnel using the VNC client on your
          local machine at `localhost:<local port number>`
