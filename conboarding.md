@@ -116,8 +116,48 @@ How much does it cost to run things?
       and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
    4. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
 
-3. ReproNim: request iam from David for AWS Access
-4. DANDI: request credentials for DANDI from Satra
+3. VNC is available on `typhon`
+
+   Once you have access to `typhon`, you can use VNC to access a desktop environment on
+   the server by following these steps:
+   1. Run `vncpasswd` to set a password to used for logging into VNC
+      sessions (`man vncpasswd` for details)
+
+      ```vncpasswd```
+   2. Run `vncserver` to start a TigerVNC desktop session (`man vncserver` for details)
+
+      ```vncserver```
+
+      The started desktop session will be assigned an X display number that will be
+      indicated in the output of the `vncserver` command.
+   3. Each session is assigned a particular port number for network access. The port
+      number is the X display number plus 5900. For example, if the X display number is
+      1, the port number will be 5901. Running `vncserver -list` will show the X display
+      number and port number for each existing VNC session.
+   4. To connect to the VNC session from your local machine, you will need a VNC client.
+
+      If are using `xtightvncviewer` which has builtin SSH tunneling, you can connect to
+      a VNC session directly.
+
+      ```xtightvncviewer -via <username>@typhon.dartmouth.edu localhost:<VNC assgined port number>```
+
+      If you are using a VNC client that does not have builtin SSH tunneling, you will
+      need to create an SSH tunnel to the VNC server and then connect to the VNC session
+      through the tunnel.
+
+      1. Create an SSH tunnel to the VNC server
+
+         ```ssh -L <local port number>:localhost:<VNC assgined port number> <username>@typhon.dartmouth.edu```
+
+      2. Connect to the VNC session through the SSH tunnel using the VNC client on your
+         local machine at `localhost:<local port number>`
+
+      Where `<VNC assgined port number>` is the port number assigned to the VNC session
+      on the server and `<local port number>` is the port number on your local machine
+      that you want to use for the SSH tunnel.
+
+4. ReproNim: request iam from David for AWS Access
+5. DANDI: request credentials for DANDI from Satra
 
 
 
