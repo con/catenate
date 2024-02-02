@@ -4,7 +4,7 @@
 : AWS Launch, run, and scale feature-rich and highly-performant file systems with just a few clicks
 
 [ANCP-bids](https://github.com/ANCPLabOldenburg/ancp-bids)
-: A Python package to read/write/query/validate BIDS datasets. Ligher weight than PyBids.
+: A Python package to read/write/query/validate BIDS datasets. Lighter weight than PyBids.
 
 [Apptainer](https://apptainer.org/)
 : Apptainer/Singularity is the most widely used container system for HPC. It is designed to execute applications at bare-metal performance while being secure, portable, and 100% reproducible. Apptainer is an open-source project with a friendly community of developers and users. The user base continues to expand, with Apptainer/Singularity now used across industry and academia in many areas of work.
@@ -162,7 +162,7 @@ PBS
 : with a collection of popular neuroscience computational tools provided within ready to use containerized environmentshttps://github.com/CenterForOpenScience/modular-file-renderer
 
 [RN/reproin](https://github.com/ReproNim/reproin)
-: Its goal is to provide a turnkey flexible setup for automatic generation of shareable, version-controlled BIDS datasets from MR scanners. Provids heuristic for HeudiConv  and convention for naming exam cards and sequences in the MRI scanner.
+: Its goal is to provide a turnkey flexible setup for automatic generation of shareable, version-controlled BIDS datasets from MR scanners. Provides heuristic for HeudiConv  and convention for naming exam cards and sequences in the MRI scanner.
 
 [RN/reprostim](https://github.com/ReproNim/reprostim)
 : ReproStim is a video capture and recording suite for neuroimaging and psychology experiments. Its goal is to provide experimenters with a complete record of audio and visual stimulation for every data collection session by making it possible to easily collect high fidelity copies of the actual stimuli shown to each subject in the form of video files that can be stored alongside behavioral or neuroimaging data in public repositories.

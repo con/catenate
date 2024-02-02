@@ -66,14 +66,14 @@ How much does it cost to run things?
       $SOME_PORT`
    1. login to `typhon`: `ssh -i /path/to/key me@typhon.dartmouth.edu -p
       $SOME_PORT`
-      Note: When loging in from campus (use `eduroam`), SSH does not always work on
+      Note: When logging in from campus (use `eduroam`), SSH does not always work on
       `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
          1. (Assuming `ssh-agent` is running) `ssh-add -t 3600 /path/to/key`
          1. `ssh-add -l` should now show your fingerprint.
          1. SSH into `smaug` with connection forwarding: `ssh -A me@smaug.dartmouth.edu -p $SOME_PORT`
          1. Once on `smaug` `ssh-add -l` should now show the same fingerprint.
          1. From `smaug`, proceed to `typhon` with `ssh me@typhon.dartmouth.edu -p $SOME_PORT`
-   1. You might benefit from specifying some details withing your
+   1. You might benefit from specifying some details within your
       `~/.ssh/config` for the given host(s):
          1. `SOME_PORT` so you don't need to enter it every time
          1. `AgentForward` is equivalent to `-A`
@@ -141,7 +141,7 @@ How much does it cost to run things?
       If are using `xtightvncviewer` which has builtin SSH tunneling, you can connect to
       a VNC session directly.
 
-      ```xtightvncviewer -via <username>@<server name>.dartmouth.edu localhost:<VNC assgined port number>```
+      ```xtightvncviewer -via <username>@<server name>.dartmouth.edu localhost:<VNC assigned port number>```
 
       If you are using a VNC client that does not have builtin SSH tunneling, you will
       need to create an SSH tunnel to the VNC server and then connect to the VNC session
@@ -154,7 +154,7 @@ How much does it cost to run things?
       2. Connect to the VNC session through the SSH tunnel using the VNC client on your
          local machine at `localhost:<local port number>`
 
-      Where `<VNC assgined port number>` is the port number assigned to the VNC session
+      Where `<VNC assigned port number>` is the port number assigned to the VNC session
       on the server and `<local port number>` is the port number on your local machine
       that you want to use for the SSH tunnel. `<server name>` is the name of the server
       where the VNC session is running.
