@@ -66,7 +66,7 @@ How much does it cost to run things?
       $SOME_PORT`
    1. login to `typhon`: `ssh -i /path/to/key me@typhon.dartmouth.edu -p
       $SOME_PORT`
-      Note: When loging in from campus (use `eduroam`), SSH does not always work on
+      Note: When logging in from campus (use `eduroam`), SSH does not always work on
       `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
          1. (Assuming `ssh-agent` is running) `ssh-add -t 3600 /path/to/key`
          1. `ssh-add -l` should now show your fingerprint.
