@@ -49,3 +49,15 @@ Dianne Patterson's [Neuroimaging Core Docs](https://neuroimaging-core-docs.readt
 ## Extra fun
 
 [A new virtue of phantom MRI data: explaining variance in human participant data](https://f1000research.com/articles/9-1131/v1)
+
+## Useful projects/References
+
+### Python project templates
+
+- Python package template for new research software projects: https://github.com/UCL-ARC/python-tooling
+- Utility to create a basic Python project structure with tests, CI etc.: https://github.com/neuroinformatics-unit/python-cookiecutter
+- A template for small scientific python projects (aged): https://github.com/uwescience/shablona
+
+### Neuroimaging project templates
+
+- Template repo for bootstrapping and maintaining SOPs (Standard operation procedures): https://github.com/nipreps/SOPs-Cookiecutter
