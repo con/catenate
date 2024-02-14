@@ -57,6 +57,7 @@ Dianne Patterson's [Neuroimaging Core Docs](https://neuroimaging-core-docs.readt
 - Python package template for new research software projects: https://github.com/UCL-ARC/python-tooling
 - Utility to create a basic Python project structure with tests, CI etc.: https://github.com/neuroinformatics-unit/python-cookiecutter
 - A template for small scientific python projects (aged): https://github.com/uwescience/shablona
+- CON @jwodder's template: https://github.com/jwodder/pyrepo
 
 ### Neuroimaging project templates
 
