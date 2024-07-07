@@ -76,7 +76,7 @@ How much does it cost to run things?
    1. You might benefit from specifying some details within your
       `~/.ssh/config` for the given host(s):
          1. `SOME_PORT` so you don't need to enter it every time
-         1. `AgentForward` is equivalent to `-A`
+         1. `ForwardAgent` is equivalent to `-A`
          1. `ProxyJump` allows you to jump automatically. 
 
       ```
