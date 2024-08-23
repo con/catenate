@@ -77,7 +77,7 @@ How much does it cost to run things?
       `~/.ssh/config` for the given host(s):
          1. `SOME_PORT` so you don't need to enter it every time
          1. `ForwardAgent` is equivalent to `-A`
-         1. `ProxyJump` allows you to jump automatically. 
+         1. `ProxyJump` allows you to jump automatically.
 
       ```
       Host smaug smaug.dartmouth.edu drogon drogon.dartmouth.edu typhon typhon.dartmouth.edu
@@ -89,6 +89,16 @@ How much does it cost to run things?
       ```
       With this ssh config in place, `ssh typhon.dartmouth.edu` would
       jump you over through `smaug`.
+   1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
+      Then you can add to your ssh config in `smaug` and login from there.
+      ```
+      Host conmac
+        Hostname datalads-imac2.kiewit.dartmouth.edu
+        AddKeysToAgent yes
+        port 2223
+        user yoh
+      ```
+
 
 2. Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
    1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
