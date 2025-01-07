@@ -5,7 +5,7 @@ Please note that some of the following links and resources are not publicly acce
 
 ## Accounts
 
-### Github
+### GitHub
 
 Ask Yarik to add you to the [CON Org](https://github.com/con).
 
