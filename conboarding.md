@@ -24,13 +24,19 @@ Ask Yarik to add you to the [CON Org](https://github.com/con).
    [url "git@bitbucket.org:"]
       pushinsteadOf = https://bitbucket.org/
    ```
-1. While you are modifying .gitconfig you might consider setting your
+1. While you are modifying `~/.gitconfig` you might consider setting your
    default branch as well.
 
-```
-[init]
-   defaultBranch = main
-```
+   ```
+   [init]
+      defaultBranch = main
+   ```
+
+1. Use standard commit messages, see [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary).
+   (Also see [DataLad's commit conventions](https://github.com/datalad/datalad-core/blob/main/CONTRIBUTING.md#conventional-commits)
+
+1. Follow [REUSE Software spec](https://reuse.software/spec-3.3/) to ensure that licenses and
+   copyright information are "comprehensive, unambiguous, human- and machine-readable".
 
 ### Chat clients
 
