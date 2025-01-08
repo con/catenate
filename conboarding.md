@@ -35,7 +35,7 @@ Ask Yarik to add you to the [CON Org](https://github.com/con).
 1. Use standard commit messages, see [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#summary).
    (Also see [datalad's commit conventions](https://github.com/datalad/datalad-core/blob/main/CONTRIBUTING.md#conventional-commits)
 
-1. Follow [Reuse Software spec](https://reuse.software/spec-3.3/) to ensure that licenses and
+1. Follow [REUSE Software spec](https://reuse.software/spec-3.3/) to ensure that licenses and
    copyright information are "comprehensive, unambiguous, human- and machine-readable".
 
 ### Chat clients
