@@ -24,7 +24,7 @@ Ask Yarik to add you to the [CON Org](https://github.com/con).
    [url "git@bitbucket.org:"]
       pushinsteadOf = https://bitbucket.org/
    ```
-1. While you are modifying .gitconfig you might consider setting your
+1. While you are modifying `~/.gitconfig` you might consider setting your
    default branch as well.
 
    ```
