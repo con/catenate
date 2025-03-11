@@ -1,4 +1,4 @@
-## Vim shortcut: Yarikify the line
+## Vim shortcut: one sentence per line
 
 Break up the current line, one sentence per line.
 
