@@ -57,6 +57,10 @@ CON does not currently have a centralized IM infrastructure, there are however a
 2. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
 3. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
+### Mailing lists
+
+0. [Dartmouth Research Computing @ITC & the Libraries](https://rc.dartmouth.edu/subscribe-to-our-mailing-list/)
+
 ### Drive
 
 1. [Repronim grant directory](https://drive.google.com/drive/folders/1AbpaqrCnInU-0V7KCxIn0RdG7578JrzI?ths=true)
