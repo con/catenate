@@ -82,25 +82,31 @@ How much does it cost to run things?
       $SOME_PORT`
       Note: When logging in from campus (use `eduroam`), SSH does not always work on
       `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
-         1. (Assuming `ssh-agent` is running) `ssh-add -t 3600 /path/to/key`
+         1. (Assuming `ssh-agent` is running) `ssh-add -t 36000 /path/to/key`
          1. `ssh-add -l` should now show your fingerprint.
          1. SSH into `smaug` with connection forwarding: `ssh -A me@smaug.dartmouth.edu -p $SOME_PORT`
          1. Once on `smaug` `ssh-add -l` should now show the same fingerprint.
          1. From `smaug`, proceed to `typhon` with `ssh me@typhon.dartmouth.edu -p $SOME_PORT`
    1. You might benefit from specifying some details within your
       `~/.ssh/config` for the given host(s):
-         1. `SOME_PORT` so you don't need to enter it every time
+         1. store the `$YOUR_USERNAME` and `$SOME_PORT` values so you don't need to enter them every time
          1. `ForwardAgent` is equivalent to `-A`
-         1. `ProxyJump` allows you to jump automatically.
+         1. `ProxyJump` is equivalent to `-J` and allows you to jump automatically
 
       ```
-      Host smaug smaug.dartmouth.edu drogon drogon.dartmouth.edu typhon typhon.dartmouth.edu
-         Port $SOME_PORT
-         ForwardAgent yes
+      Host smaug
+          HostName smaug.dartmouth.edu
+          User $YOUR_USERNAME
+          Port $SOME_PORT
+          ForwardAgent yes
 
-      Host typhon typhon.dartmouth.edu
+      Host typhon
+         HostName typhon.dartmouth.edu
+         User $YOUR_USERNAME
+         Port $SOME_PORT
          ProxyJump smaug.dartmouth.edu
       ```
+      
       With this ssh config in place, `ssh typhon.dartmouth.edu` would
       jump you over through `smaug`.
    1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
