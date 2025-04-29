@@ -7,7 +7,11 @@ Please note that some of the following links and resources are not publicly acce
 
 ### GitHub
 
-Ask Yarik to add you to the [CON Org](https://github.com/con).
+1. Ask Yarik to add you to the [CON Org](https://github.com/con), including possibly the 'centroids' team.
+
+1. Add yourself to [whoweare](https://github.com/con/centerforopenneuroscience.org/blob/master/content/pages/whoweare.html) to be displayed on [the website](https://centerforopenneuroscience.org/whoweare).
+
+
 
 #### Conventions
 
@@ -42,7 +46,7 @@ Ask Yarik to add you to the [CON Org](https://github.com/con).
 
 CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
 
-0. CON-internal: by invitation (ask a colleague for the URL) after registering on matrix.io.
+0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix.to](https://matrix.to).
 1. DANDI slack workspace: registration comes with registering a user on https://dandiarchive.org. Then user needs to be invited to "internal" room.
 2. ReproNIM slack workspace (ask Yarik)
 3. DataLad matrix.io: [public room](https://matrix.to/#/#datalad:matrix.org), [internal](not-sure-if-not-private)
@@ -181,11 +185,3 @@ How much does it cost to run things?
 
 4. ReproNim: request iam from David for AWS Access
 5. DANDI: request credentials for DANDI from Satra
-
-
-
-### Boilerplate
-
-1. Add yourself to [whoweare](https://github.com/con/centerforopenneuroscience.org/blob/master/content/pages/whoweare.html) to be displayed on [the website](https://centerforopenneuroscience.org/whoweare).
-
-
