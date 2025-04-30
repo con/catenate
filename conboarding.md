@@ -7,7 +7,11 @@ Please note that some of the following links and resources are not publicly acce
 
 ### GitHub
 
-Ask Yarik to add you to the [CON Org](https://github.com/con).
+1. Ask Yarik to add you to the [CON Org](https://github.com/con), including possibly the 'centroids' team.
+
+1. Add yourself to [whoweare](https://github.com/con/centerforopenneuroscience.org/blob/master/content/pages/whoweare.html) to be displayed on [the website](https://centerforopenneuroscience.org/whoweare).
+
+
 
 #### Conventions
 
@@ -42,7 +46,7 @@ Ask Yarik to add you to the [CON Org](https://github.com/con).
 
 CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
 
-0. CON-internal: by invitation (ask a colleague for the URL) after registering on matrix.io.
+0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix.to](https://matrix.to).
 1. DANDI slack workspace: registration comes with registering a user on https://dandiarchive.org. Then user needs to be invited to "internal" room.
 2. ReproNIM slack workspace (ask Yarik)
 3. DataLad matrix.io: [public room](https://matrix.to/#/#datalad:matrix.org), [internal](not-sure-if-not-private)
@@ -78,25 +82,31 @@ How much does it cost to run things?
       $SOME_PORT`
       Note: When logging in from campus (use `eduroam`), SSH does not always work on
       `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
-         1. (Assuming `ssh-agent` is running) `ssh-add -t 3600 /path/to/key`
+         1. (Assuming `ssh-agent` is running) `ssh-add -t 36000 /path/to/key`
          1. `ssh-add -l` should now show your fingerprint.
          1. SSH into `smaug` with connection forwarding: `ssh -A me@smaug.dartmouth.edu -p $SOME_PORT`
          1. Once on `smaug` `ssh-add -l` should now show the same fingerprint.
          1. From `smaug`, proceed to `typhon` with `ssh me@typhon.dartmouth.edu -p $SOME_PORT`
    1. You might benefit from specifying some details within your
       `~/.ssh/config` for the given host(s):
-         1. `SOME_PORT` so you don't need to enter it every time
+         1. store the `$YOUR_USERNAME` and `$SOME_PORT` values so you don't need to enter them every time
          1. `ForwardAgent` is equivalent to `-A`
-         1. `ProxyJump` allows you to jump automatically.
+         1. `ProxyJump` is equivalent to `-J` and allows you to jump automatically
 
       ```
-      Host smaug smaug.dartmouth.edu drogon drogon.dartmouth.edu typhon typhon.dartmouth.edu
-         Port $SOME_PORT
-         ForwardAgent yes
+      Host smaug
+          HostName smaug.dartmouth.edu
+          User $YOUR_USERNAME
+          Port $SOME_PORT
+          ForwardAgent yes
 
-      Host typhon typhon.dartmouth.edu
+      Host typhon
+         HostName typhon.dartmouth.edu
+         User $YOUR_USERNAME
+         Port $SOME_PORT
          ProxyJump smaug.dartmouth.edu
       ```
+      
       With this ssh config in place, `ssh typhon.dartmouth.edu` would
       jump you over through `smaug`.
    1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
@@ -181,11 +191,3 @@ How much does it cost to run things?
 
 4. ReproNim: request iam from David for AWS Access
 5. DANDI: request credentials for DANDI from Satra
-
-
-
-### Boilerplate
-
-1. Add yourself to [whoweare](https://github.com/con/centerforopenneuroscience.org/blob/master/content/pages/whoweare.html) to be displayed on [the website](https://centerforopenneuroscience.org/whoweare).
-
-
