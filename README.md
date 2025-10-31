@@ -52,6 +52,10 @@ Dianne Patterson's [Neuroimaging Core Docs](https://neuroimaging-core-docs.readt
 
 ## Useful projects/References
 
+### AI Development Tools
+
+- [Running Claude Code in a Container](ai/claude-code-container.md): Guide for running Claude Code CLI in Docker/Podman with full permissions
+
 ### Python project templates
 
 - Python package template for new research software projects: https://github.com/UCL-ARC/python-tooling
