@@ -54,7 +54,7 @@ Dianne Patterson's [Neuroimaging Core Docs](https://neuroimaging-core-docs.readt
 
 ### AI Development Tools
 
-- [Running Claude Code in a Container](ai/claude-code-container.md): Guide for running Claude Code CLI in Docker/Podman with full permissions
+- [Running Claude Code in a Container](ai/claude-code-container.md): Guide for running Claude Code CLI in Podman with full permissions
 
 ### Python project templates
 
