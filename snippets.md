@@ -4,7 +4,7 @@ Break up the current line, one sentence per line.
 
 `nnoremap <Leader>s :execute 's/\%>' . col('.') . 'c\(\.\)\s\+/\1\r/'<CR>`
 
-## exclip: execute a file, copy file contents and outputs
+## function: `exclip`: execute a file, copy file contents and outputs
 
 ```sh
 function exclip() {
