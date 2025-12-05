@@ -106,7 +106,7 @@ How much does it cost to run things?
          Port $SOME_PORT
          ProxyJump smaug.dartmouth.edu
       ```
-      
+
       With this ssh config in place, `ssh typhon.dartmouth.edu` would
       jump you over through `smaug`.
    1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
