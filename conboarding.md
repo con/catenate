@@ -106,7 +106,7 @@ How much does it cost to run things?
          Port $SOME_PORT
          ProxyJump smaug.dartmouth.edu
       ```
-      
+
       With this ssh config in place, `ssh typhon.dartmouth.edu` would
       jump you over through `smaug`.
    1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
@@ -191,3 +191,21 @@ How much does it cost to run things?
 
 4. ReproNim: request iam from David for AWS Access
 5. DANDI: request credentials for DANDI from Satra
+
+## Collaboration on Pull Requests
+
+The CON team works on many projects and is often spread thin, so its important to be efficient with pull requests and review.
+
+### Creating PRs
+- Keep PRs as small and focused as possible - this makes them easier for others to review and has a lower risk of introducing unintended side effects (a +/- lines changed under 200 is generally advised)
+- Self-review your diff before requesting others
+- Mark as draft if not ready for review
+
+### PR Description
+- The first line can link issues by using a [keyword phrase](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) which will then automatically close the issue upon merge (you can also manually link them using the 'Development' tab on the right)
+- Make sure the description explains why the change was made
+- use `- [ ] todo item` to indicate remaining work
+
+### Requesting Review
+- For larger PRs consider using an AI tool for initial review
+- Invite others to review (even if they are not "experts" on that repo)
