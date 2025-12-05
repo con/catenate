@@ -197,7 +197,7 @@ How much does it cost to run things?
 The CON team works on many projects and is often spread thin, so its important to be efficient with pull requests and review.
 
 ### Creating PRs
-- Keep PRs small and focused - easier to review and less risk
+- Keep PRs as small and focused as possible - this makes them easier for others to review and has a lower risk of introducing unintended side effects (a +/- lines changed under 200 is generally advised)
 - Self-review your diff before requesting others
 - Mark as draft if not ready for review
 
