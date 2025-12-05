@@ -191,3 +191,21 @@ How much does it cost to run things?
 
 4. ReproNim: request iam from David for AWS Access
 5. DANDI: request credentials for DANDI from Satra
+
+## Collaboration on Pull Requests
+
+The CON team works on many projects and is often spread thin, so its important to be efficient with pull requests and review.
+
+### Creating PRs
+- Keep PRs small and focused - easier to review and less risk
+- Self-review your diff before requesting others
+- Mark as draft if not ready for review
+
+### PR Description
+- Link issues with `Closes #<issue-number>` to automatically close upon merge.
+- Make sure the description explains why the change was made
+- use `- [ ] todo item` to indicate remaining work
+
+### Requesting Review
+- For larger PRs consider using an AI tool for initial review
+- Invite others to review (even if they are not "experts" on that repo)
