@@ -94,13 +94,13 @@ How much does it cost to run things?
          1. `ProxyJump` is equivalent to `-J` and allows you to jump automatically
 
       ```
-      Host smaug
+      Host smaug smaug.datalad.org smaug.dartmouth.edu
           HostName smaug.dartmouth.edu
           User $YOUR_USERNAME
           Port $SOME_PORT
           ForwardAgent yes
 
-      Host typhon
+      Host typhon typhon.datalad.org typhon.dartmouth.edu
          HostName typhon.dartmouth.edu
          User $YOUR_USERNAME
          Port $SOME_PORT
@@ -127,7 +127,7 @@ How much does it cost to run things?
       2. To set up ProxyJump through ssh, you must already have ssh access to a server on campus.
          * For example, if you already have ssh access to our server `Smaug`, you can set up ProxyJump by adding the following to your `~/.ssh/config` file:
          ```
-            Host smaug smaug.dartmouth.edu
+            Host smaug smaug.datalad.org smaug.dartmouth.edu
                 Hostname smaug.dartmouth.edu
                 AddKeysToAgent yes
                 IdentityFile <path to your private key>
