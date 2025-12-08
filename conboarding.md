@@ -207,5 +207,5 @@ The CON team works on many projects and is often spread thin, so its important t
 - use `- [ ] todo item` to indicate remaining work
 
 ### Requesting Review
-- For larger PRs consider using an AI tool for initial review
+- Consider using an AI tool for initial review, and make sure to address or resolve/close the items of that review before inviting human reviewers.
 - Invite others to review (even if they are not "experts" on that repo)
