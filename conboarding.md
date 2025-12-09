@@ -203,7 +203,7 @@ The CON team works on many projects and is often spread thin, so its important t
 
 ### PR Description
 - The first line can link issues by using a [keyword phrase](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) which will then automatically close the issue upon merge (you can also manually link them using the 'Development' tab on the right)
-- Make sure the description explains why the change was made
+- Make sure the description explains why the change was made (and how/what, if helpful to reviewers)
 - use `- [ ] todo item` to indicate remaining work
 
 ### Requesting Review
