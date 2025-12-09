@@ -198,7 +198,7 @@ The CON team works on many projects and is often spread thin, so its important t
 
 ### Creating PRs
 - Keep PRs as small and focused as possible - this makes them easier for others to review and has a lower risk of introducing unintended side effects (a +/-  lines of code under 200 excluding docs/tests generally advised)
-- Self-review your diff before requesting others
+- Self-review your diff and PR before requesting review
 - Mark as draft if not ready for review
 
 ### PR Description
