@@ -222,9 +222,9 @@ Co-Authored-By: <Tool> <tool-version> / <Model> <model-version> <noreply@<vendor
 
 Discover the tool version from the tool itself (commonly `--version`) and use the model identifier the tool reports. Don't guess.
 
-### Encode this rule in your repo's AI instructions
+### Encode this rule in your user-level and repo's AI instructions
 
-Repo-level AI instruction files (`CLAUDE.md`, `AGENTS.md`, `.cursorrules`, etc.) should carry this rule so whichever AI tool is in use applies it automatically, without a human prompting each commit. Drop the following block into yours:
+Repo-level and user-level AI instruction files (`CLAUDE.md`, `AGENTS.md`, `.cursorrules`, etc.) should carry this rule so whichever AI tool is in use applies it automatically, without a human prompting each commit. Drop the following block into yours:
 
 ````markdown
 ## Commit co-authorship
