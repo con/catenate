@@ -209,3 +209,39 @@ The CON team works on many projects and is often spread thin, so its important t
 ### Requesting Review
 - Consider using an AI tool for initial review, and make sure to address or resolve/close the items of that review before inviting human reviewers.
 - Invite others to review (even if they are not "experts" on that repo)
+
+## Commit Co-Authorship
+
+When an AI tool (agent, coding assistant, IDE integration) materially contributes to a commit, the commit MUST include a `Co-Authored-By` trailer identifying both the **tool and its version** and the **model and its version**. This makes the git history the inspectable provenance record so anyone reading the repo can tell which tool produced which change.
+
+Format:
+
+```
+Co-Authored-By: <Tool> <tool-version> / <Model> <model-version> <noreply@<vendor-domain>>
+```
+
+Discover the tool version from the tool itself (commonly `--version`) and use the model identifier the tool reports. Don't guess.
+
+### Encode this rule in your repo's AI instructions
+
+Repo-level AI instruction files (`CLAUDE.md`, `AGENTS.md`, `.cursorrules`, etc.) should carry this rule so whichever AI tool is in use applies it automatically, without a human prompting each commit. Drop the following block into yours:
+
+````markdown
+## Commit co-authorship
+
+Every commit you author MUST include a `Co-Authored-By` trailer identifying both your tool name + version and your underlying model + version. Format:
+
+```
+Co-Authored-By: <Tool> <tool-version> / <Model> <model-version> <noreply@<vendor-domain>>
+```
+
+Use the actual versions reported by your tool. Don't guess.
+````
+
+### Example: Claude Code
+
+```
+Co-Authored-By: Claude Code 2.1.63 / Claude Opus 4.6 <noreply@anthropic.com>
+```
+
+`claude --version` reports the Claude Code CLI version; the active model is reported by the CLI in its status / via `/model`.
