@@ -71,54 +71,101 @@ CON does not currently have a centralized IM infrastructure, there are however a
 
 ### Compute
 
-What are the appropriate uses of each box?
-How much does it cost to run things?
+#### CON's development boxes
+
+Among others:
+- `smaug`: lots of storage for home directories, aging with limited RAM.
+- `typhon`: beefy compute available including GPU compute, storage on `/data/<username>`.
 
 
-1. Send desired login name and .pub portion of the SSH key to Yarik for development box(es): smaug, typhon, etc
-   1. login to `smaug`: `ssh -i /path/to/key me@smaug.dartmouth.edu -p
-      $SOME_PORT`
-   1. login to `typhon`: `ssh -i /path/to/key me@typhon.dartmouth.edu -p
-      $SOME_PORT`
-      Note: When logging in from campus (use `eduroam`), SSH does not always work on
-      `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
-         1. (Assuming `ssh-agent` is running) `ssh-add -t 36000 /path/to/key`
-         1. `ssh-add -l` should now show your fingerprint.
-         1. SSH into `smaug` with connection forwarding: `ssh -A me@smaug.dartmouth.edu -p $SOME_PORT`
-         1. Once on `smaug` `ssh-add -l` should now show the same fingerprint.
-         1. From `smaug`, proceed to `typhon` with `ssh me@typhon.dartmouth.edu -p $SOME_PORT`
-   1. You might benefit from specifying some details within your
-      `~/.ssh/config` for the given host(s):
-         1. store the `$YOUR_USERNAME` and `$SOME_PORT` values so you don't need to enter them every time
-         1. `ForwardAgent` is equivalent to `-A`
-         1. `ProxyJump` is equivalent to `-J` and allows you to jump automatically
+1. Send desired login name and the `.pub` portion of your preferred SSH key to Yarik for
+   development box(es): `smaug`, `typhon`, `drogon`, etc.
 
-      ```
-      Host smaug smaug.datalad.org smaug.dartmouth.edu
-          HostName smaug.dartmouth.edu
-          User $YOUR_USERNAME
-          Port $SOME_PORT
-          ForwardAgent yes
+2. Set the connection details:
 
-      Host typhon typhon.datalad.org typhon.dartmouth.edu
-         HostName typhon.dartmouth.edu
-         User $YOUR_USERNAME
-         Port $SOME_PORT
-         ProxyJump smaug.dartmouth.edu
-      ```
+   ```
+   export CON_SSH_KEY="$HOME/.ssh/YOUR_KEY" CON_SSH_USER="YOUR_USERNAME" CON_SSH_PORT="YOUR_PORT"
+   ```
 
-      With this ssh config in place, `ssh typhon.dartmouth.edu` would
-      jump you over through `smaug`.
-   1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
-      Then you can add to your ssh config in `smaug` and login from there.
-      ```
-      Host conmac
-        Hostname datalads-imac2.kiewit.dartmouth.edu
-        AddKeysToAgent yes
-        port 2223
-        user yoh
-      ```
+3. Use `ssh-agent` for your private key:
 
+   ```
+   ssh-add -t 36000 "$CON_SSH_KEY"
+   ssh-add -l # display the fingerprint of the key
+   ```
+
+4. Consider using the following command to append the host entries to your SSH
+   config file:
+
+   ```
+   cat >> ~/.ssh/config <<EOF
+   Host smaug smaug.datalad.org smaug.dartmouth.edu
+       HostName smaug.dartmouth.edu
+       User $CON_SSH_USER
+       Port $CON_SSH_PORT
+       IdentityFile $CON_SSH_KEY
+       IdentitiesOnly yes
+       ForwardAgent yes
+       PasswordAuthentication no
+
+   Host typhon typhon.datalad.org typhon.dartmouth.edu
+       HostName typhon.dartmouth.edu
+       User $CON_SSH_USER
+       Port $CON_SSH_PORT
+       IdentityFile $CON_SSH_KEY
+       IdentitiesOnly yes
+       ProxyJump smaug
+       ForwardAgent yes
+       PasswordAuthentication no
+
+   Host drogon drogon.datalad.org drogon.dartmouth.edu
+       HostName drogon.dartmouth.edu
+       User $CON_SSH_USER
+       Port $CON_SSH_PORT
+       IdentityFile $CON_SSH_KEY
+       IdentitiesOnly yes
+       ProxyJump smaug
+       ForwardAgent yes
+       PasswordAuthentication no
+   EOF
+   ```
+
+   The options are:
+
+   - `IdentityFile`: use the key you sent to Yarik.
+   - `IdentitiesOnly yes`: avoid trying unrelated keys from your agent.
+   - `ForwardAgent yes`: make your local agent available after logging into
+     a remote host.
+   - `ProxyJump smaug`: reach `typhon` and `drogon` through `smaug` as there accessibility is more limited.
+   - `PasswordAuthentication no`: do not use SSH password authentication.
+
+   Equivalent manual command for illustrative purposes:
+
+   ```
+   ssh -A -o PasswordAuthentication=no -o IdentitiesOnly=yes -i "$CON_SSH_KEY" -J "$CON_SSH_USER@smaug.dartmouth.edu:$CON_SSH_PORT" -p "$CON_SSH_PORT" "$CON_SSH_USER@typhon.dartmouth.edu"
+   ```
+
+   With this SSH config in place, `ssh typhon` etc. should work, connecting
+   through `smaug` as required.
+
+   Useful diagnostic:
+
+   ```
+   ssh -G typhon | grep -E '^(hostname|user|port|identityfile|proxyjump|passwordauthentication)'
+   ```
+
+5. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
+   Then you can add to your SSH config in `smaug` and login from there. Configuration example:
+
+   ```
+   Host conmac
+     HostName datalads-imac2.kiewit.dartmouth.edu
+     AddKeysToAgent yes
+     Port 2223
+     User yoh
+   ```
+
+#### Discovery Cluster
 
 2. Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
    1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
