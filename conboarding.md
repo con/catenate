@@ -1,6 +1,6 @@
 # Con/boarding
 
-This pages is intended for new employees of the Center for Open Neuroscience.
+This page is intended for new employees of the Center for Open Neuroscience.
 Please note that some of the following links and resources are not publicly accessible.
 
 ## Accounts
@@ -44,9 +44,9 @@ Please note that some of the following links and resources are not publicly acce
 
 ## Chat clients
 
-CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
+CON does not currently have a centralized IM infrastructure, there are, however, a number of per-project channels.
 
-0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix.to](https://matrix.to).
+0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix](https://matrix.org).
 1. DANDI slack workspace: registration comes with registering a user on https://dandiarchive.org. Then user needs to be invited to "internal" room.
 2. ReproNIM slack workspace (ask Yarik)
 3. DataLad matrix.io: [public room](https://matrix.to/#/#datalad:matrix.org), [internal](not-sure-if-not-private)
@@ -55,7 +55,7 @@ CON does not currently have a centralized IM infrastructure, there are however a
 
 ## Calendar
 
-0. TODO: CON Calendar
+0. [CON Calendar](https://calendar.google.com/calendar/embed?src=cba4207e8e46bad2dd3727879a081271aebf40eb1777b94e7ad026fc9bbcba82%40group.calendar.google.com&ctz=America%2FNew_York) (permission required)
 1. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
 1. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
 1. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
@@ -132,7 +132,7 @@ Among others:
    - `IdentitiesOnly yes`: avoid trying unrelated keys from your agent.
    - `ForwardAgent yes`: make your local agent available after logging into
      a remote host.
-   - `ProxyJump smaug`: reach `typhon` and `drogon` through `smaug` as there accessibility is more limited.
+   - `ProxyJump smaug`: reach `typhon` and `drogon` through `smaug` as access there is more limited.
    - `PasswordAuthentication no`: do not use SSH password authentication.
 
    Equivalent manual command for illustrative purposes:
@@ -187,7 +187,7 @@ Get an account for the Discovery Cluster at Dartmouth and set up remote access t
    command returns information about a VNC server, VNC is available on the server.
    Once you have access to a server with VNC available, you can use VNC to access a
    desktop environment on the server by following these steps:
-   1. Run `vncpasswd` to set a password to used for logging into VNC
+      1. Run `vncpasswd` to set a password to use for logging into VNC
       sessions (`man vncpasswd` for details)
 
       ```vncpasswd```
@@ -203,12 +203,12 @@ Get an account for the Discovery Cluster at Dartmouth and set up remote access t
       number and port number for each existing VNC session.
    4. To connect to the VNC session from your local machine, you will need a VNC client.
 
-      If are using `xtightvncviewer` which has builtin SSH tunneling, you can connect to
+      If you are using `xtightvncviewer` which has built-in SSH tunneling, you can connect to
       a VNC session directly.
 
       ```xtightvncviewer -via <username>@<server name>.dartmouth.edu localhost:<VNC assigned port number>```
 
-      If you are using a VNC client that does not have builtin SSH tunneling, you will
+      If you are using a VNC client that does not have built-in SSH tunneling, you will
       need to create an SSH tunnel to the VNC server and then connect to the VNC session
       through the tunnel.
 
@@ -226,12 +226,12 @@ Get an account for the Discovery Cluster at Dartmouth and set up remote access t
 
 #### Other resources
 
-1. ReproNim: request iam from David for AWS Access
+1. ReproNIM: request IAM from David for AWS Access
 1. DANDI: request credentials for DANDI from Satra
 
 ## Collaboration on Pull Requests
 
-The CON team works on many projects and is often spread thin, so its important to be efficient with pull requests and review.
+The CON team works on many projects and is often spread thin, so it's important to be efficient with pull requests and review.
 
 ### Creating PRs
 - Keep PRs as small and focused as possible - this makes them easier for others to review and has a lower risk of introducing unintended side effects (a +/-  lines of code under 200 excluding docs/tests generally advised)
