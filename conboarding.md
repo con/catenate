@@ -42,7 +42,7 @@ Please note that some of the following links and resources are not publicly acce
 1. Follow [REUSE Software spec](https://reuse.software/spec-3.3/) to ensure that licenses and
    copyright information are "comprehensive, unambiguous, human- and machine-readable".
 
-### Chat clients
+## Chat clients
 
 CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
 
@@ -53,23 +53,23 @@ CON does not currently have a centralized IM infrastructure, there are however a
 4. [NWB slack workspace](https://join.slack.com/t/nwb-users/shared_invite/enQtNzMwOTcwNzQ2MDM5LWMyZDUwODJjYjM3MzMzYzZiNDk4ZTU3ZjQ3MmMxMmY5MDUyNzc0ZDI5ZjViYmJjYTQ5NjljOGFjZmMwOGIwZmQ)
 5. [mattermost brainhack](https://mattermost.brainhack.org/): for various open science projects
 
-### Calendar
+## Calendar
 
 0. TODO: CON Calendar
 1. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
-2. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
-2. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
-3. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
+1. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
+1. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
+1. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
 ### Mailing lists
 
 0. [Dartmouth Research Computing @ITC & the Libraries](https://rc.dartmouth.edu/subscribe-to-our-mailing-list/)
 
-### Drive
+## Drive
 
 1. [Repronim grant directory](https://drive.google.com/drive/folders/1AbpaqrCnInU-0V7KCxIn0RdG7578JrzI?ths=true)
 
-### Compute
+## Compute
 
 #### CON's development boxes
 
