@@ -61,10 +61,6 @@ CON does not currently have a centralized IM infrastructure, there are however a
 1. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
 1. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
-### Mailing lists
-
-0. [Dartmouth Research Computing @ITC & the Libraries](https://rc.dartmouth.edu/subscribe-to-our-mailing-list/)
-
 ## Drive
 
 1. [Repronim grant directory](https://drive.google.com/drive/folders/1AbpaqrCnInU-0V7KCxIn0RdG7578JrzI?ths=true)
@@ -167,33 +163,25 @@ Among others:
 
 #### Discovery Cluster
 
-2. Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
+Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
    1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
-   2. The Discovery Cluster can be accessed off campus either via VPN or ProxyJump through ssh.
-      1. To set up VPN, please visit [the Services Portal](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17668) for info.
-      2. To set up ProxyJump through ssh, you must already have ssh access to a server on campus.
-         * For example, if you already have ssh access to our server `Smaug`, you can set up ProxyJump by adding the following to your `~/.ssh/config` file:
-         ```
-            Host smaug smaug.datalad.org smaug.dartmouth.edu
-                Hostname smaug.dartmouth.edu
-                AddKeysToAgent yes
-                IdentityFile <path to your private key>
-                port <ssh port for Smaug>
-                user <your username>
+   1. Subscribe to the [Dartmouth Research Computing mailing list](https://eepurl.com/c_EWgz).
+   1. [Get access](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17668) to the VPN.
+   1. Example ssh config entry:
 
-            Host discovery discovery.dartmouth.edu
-                HostName discovery.dartmouth.edu
-                PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
-                ProxyJump smaug.dartmouth.edu
-                ServerAliveInterval 30
-                user <your user name at discovery>
-         ```
-   3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663)
+      ```
+      Host discovery discovery.dartmouth.edu
+          HostName discovery.dartmouth.edu
+          PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
+          ServerAliveInterval 30
+          User <your user name at discovery>
+      ```
+   1. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663)
       at Services Portal, [Dartmouth Brain Imaging Center Handbook](https://dbic-handbook.readthedocs.io/en/latest/discovery.html),
       and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
-   4. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
+   1. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
 
-3. VNC is available on some of our servers
+#### Using VNC
 
    To find out if a server provides VNC, try running `vncserver --version`. If the
    command returns information about a VNC server, VNC is available on the server.
@@ -236,8 +224,10 @@ Among others:
       that you want to use for the SSH tunnel. `<server name>` is the name of the server
       where the VNC session is running.
 
-4. ReproNim: request iam from David for AWS Access
-5. DANDI: request credentials for DANDI from Satra
+#### Other resources
+
+1. ReproNim: request iam from David for AWS Access
+1. DANDI: request credentials for DANDI from Satra
 
 ## Collaboration on Pull Requests
 
