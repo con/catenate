@@ -187,7 +187,7 @@ Get an account for the Discovery Cluster at Dartmouth and set up remote access t
    command returns information about a VNC server, VNC is available on the server.
    Once you have access to a server with VNC available, you can use VNC to access a
    desktop environment on the server by following these steps:
-      1. Run `vncpasswd` to set a password to use for logging into VNC
+   1. Run `vncpasswd` to set a password to use for logging into VNC
       sessions (`man vncpasswd` for details)
 
       ```vncpasswd```
