@@ -14,7 +14,6 @@ Some of the items in this table can only be completed as one gets to the end of 
 | Slack email | Invite to Slack workspaces (DANDI, ReproNim, ...) as required      |
 | GitHub handle | Add new employee to the [CON Org](https://github.com/con), including possibly the 'centroids' team.      |
 | SSH public key and desired login name | Add the new employee to the development boxes and provide port numbers. |
-| Complete Discovery Cluster setup | Request the new employee be added to the `rc-DBIC` group.                                                |
 | Dartmouth email (generic onboarding) | Add the new employee to the CON email list. |
 | Gmail calendar account (see below) | Share calendars CON and maybe others listed below |
 | Link for meeting scheduling | Create CON formatted link. |
@@ -183,6 +182,7 @@ Among others:
 
 Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
    1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
+   1. Respond to welcome email by asking to be added to the `rc-DBIC` group (Necessary to use Datalad). Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
    1. Subscribe to the [Dartmouth Research Computing mailing list](https://eepurl.com/c_EWgz).
    1. [Get access](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17668) to the VPN.
    1. Example ssh config entry:
@@ -197,7 +197,7 @@ Get an account for the Discovery Cluster at Dartmouth and set up remote access t
    1. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663)
       at Services Portal, [Dartmouth Brain Imaging Center Handbook](https://dbic-handbook.readthedocs.io/en/latest/discovery.html),
       and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
-   1. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
+
 
 #### Using VNC
 
