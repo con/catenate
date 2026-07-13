@@ -11,7 +11,7 @@ Some of the items in this table can only be completed as one gets to the end of 
 
 | Employee Prerequisite                                                    | Yarik's Action                                                                                           |
 |-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Slack email | ReproNIM Slack as required      |
+| Slack email | Invite to Slack workspaces (DANDI, ReproNim, ...) as required      |
 | GitHub handle | Add new employee to the [CON Org](https://github.com/con), including possibly the 'centroids' team.      |
 | SSH public key and desired login name | Add the new employee to the development boxes and provide port numbers. |
 | Complete Discovery Cluster setup | Request the new employee be added to the `rc-DBIC` group.                                                |
