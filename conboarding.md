@@ -2,12 +2,36 @@
 
 This page is intended for new employees of the Center for Open Neuroscience.
 Please note that some of the following links and resources are not publicly accessible.
+As you work through the document make fixes for any typos or other issues you encounter as you go and submit a pull request to the repository at the end.
+
+
+## Tasks for Yarik
+
+Some of the items in this table can only be completed as one gets to the end of this document.
+
+| Employee Prerequisite                                                    | Yarik's Action                                                                                           |
+|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| Slack email | ReproNIM Slack as required      |
+| GitHub handle | Add new employee to the [CON Org](https://github.com/con), including possibly the 'centroids' team.      |
+| SSH public key and desired login name | Add the new employee to the development boxes and provide port numbers. |
+| Complete Discovery Cluster setup | Request the new employee be added to the `rc-DBIC` group.                                                |
+| Dartmouth email (generic onboarding) | Add the new employee to the CON email list. |
+| Gmail calendar account (see below) | Share calendars CON and maybe others listed below |
+| Link for meeting scheduling | Create CON formatted link. |
 
 ## Accounts
 
-### GitHub
+### Calendar
 
-1. Ask Yarik to add you to the [CON Org](https://github.com/con), including possibly the 'centroids' team.
+You will need to pick a calendar provider. If you wish, you can use your Dartmouth Google Calendar account (google.dartmouth.edu doesn't display it but it is accessible in the usual google app menu). If you wish to link the below shared calendars with other calendar apps/accounts then you will have to [enable them](https://calendar.google.com/calendar/u/0/syncselect?pli=1) for sharing.
+
+1. [CON Calendar](https://calendar.google.com/calendar/embed?src=cba4207e8e46bad2dd3727879a081271aebf40eb1777b94e7ad026fc9bbcba82%40group.calendar.google.com&ctz=America%2FNew_York) (permission required)
+2. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
+3. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
+4. DataLad cal
+5. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
+
+### GitHub
 
 1. Add yourself to [whoweare](https://github.com/con/centerforopenneuroscience.org/blob/master/content/pages/whoweare.html) to be displayed on [the website](https://centerforopenneuroscience.org/whoweare).
 
@@ -42,24 +66,18 @@ Please note that some of the following links and resources are not publicly acce
 1. Follow [REUSE Software spec](https://reuse.software/spec-3.3/) to ensure that licenses and
    copyright information are "comprehensive, unambiguous, human- and machine-readable".
 
-## Chat clients
+### Chat clients
 
-CON does not currently have a centralized IM infrastructure, there are, however, a number of per-project channels.
+CON does not currently have a centralized IM infrastructure, there are, however, a number of per-project channels. Create accounts and share id/handle/email as required:
 
 0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix](https://matrix.org).
 1. DANDI slack workspace: registration comes with registering a user on https://dandiarchive.org. Then user needs to be invited to "internal" room.
 2. ReproNIM slack workspace (ask Yarik)
-3. DataLad matrix.io: [public room](https://matrix.to/#/#datalad:matrix.org), [internal](not-sure-if-not-private)
+3. DataLad: public room and internal room
 4. [NWB slack workspace](https://join.slack.com/t/nwb-users/shared_invite/enQtNzMwOTcwNzQ2MDM5LWMyZDUwODJjYjM3MzMzYzZiNDk4ZTU3ZjQ3MmMxMmY5MDUyNzc0ZDI5ZjViYmJjYTQ5NjljOGFjZmMwOGIwZmQ)
-5. [mattermost brainhack](https://mattermost.brainhack.org/): for various open science projects
+5. [mattermost brainhack](https://mattermost.brainhack.org/): for various open science projects. 
 
-## Calendar
 
-0. [CON Calendar](https://calendar.google.com/calendar/embed?src=cba4207e8e46bad2dd3727879a081271aebf40eb1777b94e7ad026fc9bbcba82%40group.calendar.google.com&ctz=America%2FNew_York) (permission required)
-1. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
-1. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
-1. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
-1. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
 ## Drive
 
@@ -228,6 +246,7 @@ Get an account for the Discovery Cluster at Dartmouth and set up remote access t
 
 1. ReproNIM: request IAM from David for AWS Access
 1. DANDI: request credentials for DANDI from Satra
+1. Unity: Use Dartmouth College for signing up at https://account.unityhpc.org/ and request to join the `pi_general_dartmouth_edu` group.
 
 ## Collaboration on Pull Requests
 
