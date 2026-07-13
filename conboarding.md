@@ -1,6 +1,6 @@
 # Con/boarding
 
-This pages is intended for new employees of the Center for Open Neuroscience.
+This page is intended for new employees of the Center for Open Neuroscience.
 Please note that some of the following links and resources are not publicly accessible.
 
 ## Accounts
@@ -42,117 +42,152 @@ Please note that some of the following links and resources are not publicly acce
 1. Follow [REUSE Software spec](https://reuse.software/spec-3.3/) to ensure that licenses and
    copyright information are "comprehensive, unambiguous, human- and machine-readable".
 
-### Chat clients
+## Chat clients
 
-CON does not currently have a centralized IM infrastructure, there are however a number of per-project channels.
+CON does not currently have a centralized IM infrastructure, there are, however, a number of per-project channels.
 
-0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix.to](https://matrix.to).
+0. CON-internal: by invitation (ask a colleague for the URL) after registering on [matrix](https://matrix.org).
 1. DANDI slack workspace: registration comes with registering a user on https://dandiarchive.org. Then user needs to be invited to "internal" room.
 2. ReproNIM slack workspace (ask Yarik)
 3. DataLad matrix.io: [public room](https://matrix.to/#/#datalad:matrix.org), [internal](not-sure-if-not-private)
 4. [NWB slack workspace](https://join.slack.com/t/nwb-users/shared_invite/enQtNzMwOTcwNzQ2MDM5LWMyZDUwODJjYjM3MzMzYzZiNDk4ZTU3ZjQ3MmMxMmY5MDUyNzc0ZDI5ZjViYmJjYTQ5NjljOGFjZmMwOGIwZmQ)
 5. [mattermost brainhack](https://mattermost.brainhack.org/): for various open science projects
 
-### Calendar
+## Calendar
 
-0. TODO: CON Calendar
+0. [CON Calendar](https://calendar.google.com/calendar/embed?src=cba4207e8e46bad2dd3727879a081271aebf40eb1777b94e7ad026fc9bbcba82%40group.calendar.google.com&ctz=America%2FNew_York) (permission required)
 1. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
-2. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
-2. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
-3. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
+1. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
+1. Datalad cal (I got a link for this but didn't have permissions, Yarik?)
+1. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
-### Mailing lists
-
-0. [Dartmouth Research Computing @ITC & the Libraries](https://rc.dartmouth.edu/subscribe-to-our-mailing-list/)
-
-### Drive
+## Drive
 
 1. [Repronim grant directory](https://drive.google.com/drive/folders/1AbpaqrCnInU-0V7KCxIn0RdG7578JrzI?ths=true)
 
-### Compute
+## Compute
 
-What are the appropriate uses of each box?
-How much does it cost to run things?
+#### CON's development boxes
 
-
-1. Send desired login name and .pub portion of the SSH key to Yarik for development box(es): smaug, typhon, etc
-   1. login to `smaug`: `ssh -i /path/to/key me@smaug.dartmouth.edu -p
-      $SOME_PORT`
-   1. login to `typhon`: `ssh -i /path/to/key me@typhon.dartmouth.edu -p
-      $SOME_PORT`
-      Note: When logging in from campus (use `eduroam`), SSH does not always work on
-      `typhon`. Instead it is recommended to use `ssh-agent` and forward the authentication connection using `-A`
-         1. (Assuming `ssh-agent` is running) `ssh-add -t 36000 /path/to/key`
-         1. `ssh-add -l` should now show your fingerprint.
-         1. SSH into `smaug` with connection forwarding: `ssh -A me@smaug.dartmouth.edu -p $SOME_PORT`
-         1. Once on `smaug` `ssh-add -l` should now show the same fingerprint.
-         1. From `smaug`, proceed to `typhon` with `ssh me@typhon.dartmouth.edu -p $SOME_PORT`
-   1. You might benefit from specifying some details within your
-      `~/.ssh/config` for the given host(s):
-         1. store the `$YOUR_USERNAME` and `$SOME_PORT` values so you don't need to enter them every time
-         1. `ForwardAgent` is equivalent to `-A`
-         1. `ProxyJump` is equivalent to `-J` and allows you to jump automatically
-
-      ```
-      Host smaug smaug.datalad.org smaug.dartmouth.edu
-          HostName smaug.dartmouth.edu
-          User $YOUR_USERNAME
-          Port $SOME_PORT
-          ForwardAgent yes
-
-      Host typhon typhon.datalad.org typhon.dartmouth.edu
-         HostName typhon.dartmouth.edu
-         User $YOUR_USERNAME
-         Port $SOME_PORT
-         ProxyJump smaug.dartmouth.edu
-      ```
-
-      With this ssh config in place, `ssh typhon.dartmouth.edu` would
-      jump you over through `smaug`.
-   1. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
-      Then you can add to your ssh config in `smaug` and login from there.
-      ```
-      Host conmac
-        Hostname datalads-imac2.kiewit.dartmouth.edu
-        AddKeysToAgent yes
-        port 2223
-        user yoh
-      ```
+Among others:
+- `smaug`: lots of storage for home directories, aging with limited RAM.
+- `typhon`: beefy compute available including GPU compute, storage on `/data/<username>`.
 
 
-2. Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
+1. Send desired login name and the `.pub` portion of your preferred SSH key to Yarik for
+   development box(es): `smaug`, `typhon`, `drogon`, etc.
+
+2. Set the connection details:
+
+   ```
+   export CON_SSH_KEY="$HOME/.ssh/YOUR_KEY" CON_SSH_USER="YOUR_USERNAME" CON_SSH_PORT="YOUR_PORT"
+   ```
+
+3. Use `ssh-agent` for your private key:
+
+   ```
+   ssh-add -t 36000 "$CON_SSH_KEY"
+   ssh-add -l # display the fingerprint of the key
+   ```
+
+4. Consider using the following command to append the host entries to your SSH
+   config file:
+
+   ```
+   cat >> ~/.ssh/config <<EOF
+   Host smaug smaug.datalad.org smaug.dartmouth.edu
+       HostName smaug.dartmouth.edu
+       User $CON_SSH_USER
+       Port $CON_SSH_PORT
+       IdentityFile $CON_SSH_KEY
+       IdentitiesOnly yes
+       ForwardAgent yes
+       PasswordAuthentication no
+
+   Host typhon typhon.datalad.org typhon.dartmouth.edu
+       HostName typhon.dartmouth.edu
+       User $CON_SSH_USER
+       Port $CON_SSH_PORT
+       IdentityFile $CON_SSH_KEY
+       IdentitiesOnly yes
+       ProxyJump smaug
+       ForwardAgent yes
+       PasswordAuthentication no
+
+   Host drogon drogon.datalad.org drogon.dartmouth.edu
+       HostName drogon.dartmouth.edu
+       User $CON_SSH_USER
+       Port $CON_SSH_PORT
+       IdentityFile $CON_SSH_KEY
+       IdentitiesOnly yes
+       ProxyJump smaug
+       ForwardAgent yes
+       PasswordAuthentication no
+   EOF
+   ```
+
+   The options are:
+
+   - `IdentityFile`: use the key you sent to Yarik.
+   - `IdentitiesOnly yes`: avoid trying unrelated keys from your agent.
+   - `ForwardAgent yes`: make your local agent available after logging into
+     a remote host.
+   - `ProxyJump smaug`: reach `typhon` and `drogon` through `smaug` as access there is more limited.
+   - `PasswordAuthentication no`: do not use SSH password authentication.
+
+   Equivalent manual command for illustrative purposes:
+
+   ```
+   ssh -A -o PasswordAuthentication=no -o IdentitiesOnly=yes -i "$CON_SSH_KEY" -J "$CON_SSH_USER@smaug.dartmouth.edu:$CON_SSH_PORT" -p "$CON_SSH_PORT" "$CON_SSH_USER@typhon.dartmouth.edu"
+   ```
+
+   With this SSH config in place, `ssh typhon` etc. should work, connecting
+   through `smaug` as required.
+
+   Useful diagnostic:
+
+   ```
+   ssh -G typhon | grep -E '^(hostname|user|port|identityfile|proxyjump|passwordauthentication)'
+   ```
+
+5. If you need to use MacOS, ask Yarik to add your key to the Con Mac.
+   Then you can add to your SSH config in `smaug` and login from there. Configuration example:
+
+   ```
+   Host conmac
+     HostName datalads-imac2.kiewit.dartmouth.edu
+     AddKeysToAgent yes
+     Port 2223
+     User yoh
+   ```
+
+#### Discovery Cluster
+
+Get an account for the Discovery Cluster at Dartmouth and set up remote access to it
    1. [Apply for Discovery Account](https://rcweb.dartmouth.edu/accounts/index.php)
-   2. The Discovery Cluster can be accessed off campus either via VPN or ProxyJump through ssh.
-      1. To set up VPN, please visit [the Services Portal](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17668) for info.
-      2. To set up ProxyJump through ssh, you must already have ssh access to a server on campus.
-         * For example, if you already have ssh access to our server `Smaug`, you can set up ProxyJump by adding the following to your `~/.ssh/config` file:
-         ```
-            Host smaug smaug.datalad.org smaug.dartmouth.edu
-                Hostname smaug.dartmouth.edu
-                AddKeysToAgent yes
-                IdentityFile <path to your private key>
-                port <ssh port for Smaug>
-                user <your username>
+   1. Subscribe to the [Dartmouth Research Computing mailing list](https://eepurl.com/c_EWgz).
+   1. [Get access](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17668) to the VPN.
+   1. Example ssh config entry:
 
-            Host discovery discovery.dartmouth.edu
-                HostName discovery.dartmouth.edu
-                PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
-                ProxyJump smaug.dartmouth.edu
-                ServerAliveInterval 30
-                user <your user name at discovery>
-         ```
-   3. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663)
+      ```
+      Host discovery discovery.dartmouth.edu
+          HostName discovery.dartmouth.edu
+          PreferredAuthentications gssapi-with-mic,hostbased,keyboard-interactive,password
+          ServerAliveInterval 30
+          User <your user name at discovery>
+      ```
+   1. More information regarding the Discovery Cluster can be found at [its documentation](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=21663)
       at Services Portal, [Dartmouth Brain Imaging Center Handbook](https://dbic-handbook.readthedocs.io/en/latest/discovery.html),
       and [John Hudson's course notes](https://rcweb.dartmouth.edu/~john/HPC/).
-   4. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
+   1. Request `rc-DBIC` group from Yarik. (Necessary to use Datalad) Be sure to follow this guide to use DBIC-installed git-annex. https://dbic-handbook.readthedocs.io/en/latest/mri/dataaccess.html#discovery-filesystem
 
-3. VNC is available on some of our servers
+#### Using VNC
 
    To find out if a server provides VNC, try running `vncserver --version`. If the
    command returns information about a VNC server, VNC is available on the server.
    Once you have access to a server with VNC available, you can use VNC to access a
    desktop environment on the server by following these steps:
-   1. Run `vncpasswd` to set a password to used for logging into VNC
+   1. Run `vncpasswd` to set a password to use for logging into VNC
       sessions (`man vncpasswd` for details)
 
       ```vncpasswd```
@@ -168,12 +203,12 @@ How much does it cost to run things?
       number and port number for each existing VNC session.
    4. To connect to the VNC session from your local machine, you will need a VNC client.
 
-      If are using `xtightvncviewer` which has builtin SSH tunneling, you can connect to
+      If you are using `xtightvncviewer` which has built-in SSH tunneling, you can connect to
       a VNC session directly.
 
       ```xtightvncviewer -via <username>@<server name>.dartmouth.edu localhost:<VNC assigned port number>```
 
-      If you are using a VNC client that does not have builtin SSH tunneling, you will
+      If you are using a VNC client that does not have built-in SSH tunneling, you will
       need to create an SSH tunnel to the VNC server and then connect to the VNC session
       through the tunnel.
 
@@ -189,12 +224,14 @@ How much does it cost to run things?
       that you want to use for the SSH tunnel. `<server name>` is the name of the server
       where the VNC session is running.
 
-4. ReproNim: request iam from David for AWS Access
-5. DANDI: request credentials for DANDI from Satra
+#### Other resources
+
+1. ReproNIM: request IAM from David for AWS Access
+1. DANDI: request credentials for DANDI from Satra
 
 ## Collaboration on Pull Requests
 
-The CON team works on many projects and is often spread thin, so its important to be efficient with pull requests and review.
+The CON team works on many projects and is often spread thin, so it's important to be efficient with pull requests and review.
 
 ### Creating PRs
 - Keep PRs as small and focused as possible - this makes them easier for others to review and has a lower risk of introducing unintended side effects (a +/-  lines of code under 200 excluding docs/tests generally advised)
