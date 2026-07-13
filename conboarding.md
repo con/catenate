@@ -28,7 +28,7 @@ You will need to pick a calendar provider. If you wish, you can use your Dartmou
 1. [CON Calendar](https://calendar.google.com/calendar/embed?src=cba4207e8e46bad2dd3727879a081271aebf40eb1777b94e7ad026fc9bbcba82%40group.calendar.google.com&ctz=America%2FNew_York) (permission required)
 2. [DANDI cal](https://calendar.google.com/calendar/embed?src=6a48akicfittlo932phrhdm84g%40group.calendar.google.com&ctz=America%2FNew_York)
 3. [ReproNIM cal](https://calendar.google.com/calendar/embed?src=ahfj9rg32tmb459up8gkv2t7ek%40group.calendar.google.com&ctz=America%2FNew_York)
-4. DataLad cal
+4. DataLad cal (not actively used ATM)
 5. [PBS Events Calendar](https://calendar.google.com/calendar/embed?src=c_31ckainhaqlmhk4hkc633fs9ho%40group.calendar.google.com&ctz=America%2FNew_York) (if you are local)
 
 ### GitHub
