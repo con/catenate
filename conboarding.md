@@ -127,7 +127,6 @@ Among others:
        Port $CON_SSH_PORT
        IdentityFile $CON_SSH_KEY
        IdentitiesOnly yes
-       ProxyJump smaug
        ForwardAgent yes
        PasswordAuthentication no
 
@@ -149,7 +148,7 @@ Among others:
    - `IdentitiesOnly yes`: avoid trying unrelated keys from your agent.
    - `ForwardAgent yes`: make your local agent available after logging into
      a remote host.
-   - `ProxyJump smaug`: reach `typhon` and `drogon` through `smaug` as access there is more limited.
+   - `ProxyJump smaug`: reach `drogon` through `smaug` as access there is more limited.
    - `PasswordAuthentication no`: do not use SSH password authentication.
 
    Equivalent manual command for illustrative purposes:
